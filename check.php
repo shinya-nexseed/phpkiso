@@ -8,9 +8,9 @@
     // echo '<br>';
 
     // 入力チェック
-    $nickname = $_POST['nickname'];
-    $email = $_POST['email'];
-    $content = $_POST['content'];
+    $nickname = htmlspecialchars($_POST['nickname']);
+    $email = htmlspecialchars($_POST['email']);
+    $content = htmlspecialchars($_POST['content']);
 
     if ($nickname == '') {
         $nickname_result = 'ニックネームを入力してください。';
